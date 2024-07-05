@@ -1,9 +1,9 @@
 <div class="card offset-3 col-6">
     <div class="card-header">
-        <h1 class="">Create Contact</h1>
+        <h1 class="">Edit Contact</h1>
     </div>
     <div class="card-body">
-        <form wire:submit="create">
+        <form wire:submit="edit">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input
@@ -70,7 +70,11 @@
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-            <button type="submit" class="btn btn-primary">Create Contact</button>
+            <button wire:navigate href="/contacts" class="btn btn-secondary">Back</button>
+            <button type="submit" class="btn btn-primary">Edit Contact</button>
         </form>
     </div>
+
+    {{-- <x-modal>
+    </x-modal> --}}
 </div>
