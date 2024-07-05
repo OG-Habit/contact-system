@@ -8,7 +8,7 @@
                         <a wire:navigate href="/contacts">Contacts</a>
                     </li>
                     <li>
-                        <button wire:click="logout">Logout</button>
+                        <button wire:click="logout" class="btn btn-primary">Logout</button>
                     </li>
                 @endauth
             </ul>

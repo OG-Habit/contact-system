@@ -20,7 +20,7 @@ Route::middleware('auth')->group(function() {
     Route::get('contacts/edit/{id}', EditContact::class);
 });
 
-Route::get("/", Login::class);
+// Route::get("/", Login::class);
 Route::get("/login", Login::class);
 
 Route::get('register', Register::class);

@@ -16,6 +16,8 @@ class Contacts extends Component
 
     public $search = '';
 
+    public $showModal = false;
+
     public function render()
     {
         if (!$this->search) {
@@ -26,6 +28,9 @@ class Contacts extends Component
             $contacts = DB::table('contacts')
                 ->where('user_id', '=', Auth::id())
                 ->where('name', 'like', '%' . $this->search . '%')
+                ->orWhere('email', 'like', '%' . $this->search . '%')
+                ->orWhere('company', 'like', '%' . $this->search . '%')
+                ->orWhere('phone', 'like', '%' . $this->search . '%')
                 ->paginate(3);
         }
         return view('livewire.contacts', ['contacts' => $contacts]);
