@@ -23,11 +23,12 @@ class Login extends Component
             'password' => 'required|min:8|max:30'
         ]);
 
-        if(Auth::attempt($validated)) {
-            $request->session()->regenerate();
-            return $this->redirect('/contacts', navigate:true);
-        }
 
-        $this->addError('email', 'The password provided does not match the email.');
+        if(Auth::attempt($validated)) {
+            session()->regenerate();
+            return redirect('/contacts');
+        } else {
+            $this->addError('email', 'The password provided does not match the email.');
+        }
     }
 }

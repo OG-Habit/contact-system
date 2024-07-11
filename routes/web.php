@@ -8,9 +8,9 @@ use App\Livewire\Register;
 use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Route::get("/create", CreateContact::class);
 
@@ -21,6 +21,6 @@ Route::middleware('auth')->group(function() {
 });
 
 // Route::get("/", Login::class);
-Route::get("/login", Login::class);
+Route::get("login", Login::class);
 
 Route::get('register', Register::class);

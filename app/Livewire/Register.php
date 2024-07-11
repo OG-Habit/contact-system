@@ -34,6 +34,6 @@ class Register extends Component
 
         Auth::login($user);
         session()->flash('success', 'User registered successfully.');
-        return $this->redirect('/contacts', Contacts::class);
+        return redirect('/contacts', Contacts::class);
     }
 }

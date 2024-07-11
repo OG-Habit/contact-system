@@ -17,6 +17,6 @@ class NavBar extends Component
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return $this->redirect('/login', navigate:true);
+        return redirect('/login');
     }
 }

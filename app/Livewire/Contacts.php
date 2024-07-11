@@ -40,6 +40,6 @@ class Contacts extends Component
         $id->delete();
 
         session()->flash('success', 'Contact deleted successfully');
-        return $this->redirect('/contacts', navigate:true);
+        return redirect('/contacts', navigate:true);
     }
 }
