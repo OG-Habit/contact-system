@@ -37,6 +37,6 @@ class CreateContact extends Component
             'country_code' => $this->country_code
         ]);
 
-        return $this->redirect('/contacts', Contacts::class);
+        return redirect('/contacts', Contacts::class);
     }
 }

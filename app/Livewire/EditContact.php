@@ -39,6 +39,6 @@ class EditContact extends Component
 
         $this->contact->update($validated);
 
-        return $this->redirect('/contacts', Contacts::class);
+        return redirect('/contacts', Contacts::class);
     }
 }
